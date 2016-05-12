@@ -20,7 +20,7 @@ void Print(SeqList* pSeq)
 	}
 	printf("\n");
 }
-//检查容量
+//检查容量,容量不足则增容
 void Check(SeqList* pSeq)
 {
 	if (pSeq->size >= pSeq->capacity)

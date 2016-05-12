@@ -5,26 +5,33 @@
 void Test()
 {
 	SeqList s;
-	INIT(&s);             //初始化
+	//初始化
+	INIT(&s);             
 	
-	PushBack(&s, 4);      //尾插
+	//尾插
+	PushBack(&s, 4);      
 	PushBack(&s, 1);
 	PushBack(&s, 3);
 	PushBack(&s, 2);
 	PushBack(&s, 5);
 	Print(&s);
 
-	Sort(&s);             //冒泡排序
+	//冒泡排序
+	Sort(&s);             
 	Print(&s);
 
-	Select(&s);           //选择排序
+	//选择排序
+	Select(&s);           
 	Print(&s);
 
-	printf("ret:%d\n", Binary(&s, 4));                //二分查找
+	//二分查找
+	printf("ret:%d\n", Binary(&s, 4));                
 
-	printf("ret:%d\n", Binary_Recur(&s, 0, 4, 2));    //用递归实现二分查找
+	//用递归实现二分查找
+	printf("ret:%d\n", Binary_Recur(&s, 0, 4, 2));    
 
-	RemoveAll(&s, 1);     //删除所有的x
+	//删除所有的x
+	RemoveAll(&s, 1);     
 	Print(&s);
 }
 

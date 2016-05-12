@@ -32,13 +32,14 @@ public:
 	{
 		cout << _str << endl;
 	}
-	
+	//尾插
 	void PushBack(char ch)
 	{
 		Checkcapacity(_size + 2);
 		_str[_size++] = ch;
 		_str[_size] = '\0';
 	}
+	//在指定位置插入字符
 	void Insert(size_t pos,char ch)
 	{
 		assert(pos>=0 && pos <= _size);
@@ -52,6 +53,7 @@ public:
 		_str[pos] = ch;
 		_size++;
 	}
+	//在指定位置插入字符串
 	void Insert(size_t pos,char* str)
 	{
 		assert(pos >= 0 && pos <= _size);
@@ -68,6 +70,7 @@ public:
 		}
 		_size += strlen(str);
 	}
+	//查找某字符返回位置下标
 	int Find(char ch)
 	{
 		char* str = _str;
@@ -83,6 +86,7 @@ public:
 		cout << "There is no data!" << endl;
 		return -1;
 	}
+	//查找字符串返回其第一个字符下标
 	int Find(const char* str)
 	{
 		char* _first = _str;
@@ -123,6 +127,7 @@ public:
 	{
 		Earse(pos,1);
 	}
+	//删除指定位置的字符及其之后的n-1个字符
 	void Earse(size_t pos,size_t n)
 	{
 		assert(pos>=0 && pos <=_size-1);
@@ -144,6 +149,7 @@ public:
 		return _str[index];
 	}
 private:
+	//检查容量,容量不足则增容
 	void Checkcapacity(size_t size)
 	{
 		if (size > _capacity)

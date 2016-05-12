@@ -10,6 +10,7 @@ public:
 	{
 		memcpy(_str, str, strlen(str) + 1);
 	}
+	//拷贝构造,深拷贝
 	String(const String& s)
 		:_str(new char[strlen(s._str) + 1])
 	{
@@ -23,6 +24,7 @@ public:
 			_str = NULL;
 		}
 	}
+	//赋值运算符重载同样是深拷贝
 	String& operator=(const String& s)
 	{
 		if (this != &s)

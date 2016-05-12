@@ -20,7 +20,7 @@ void Print(SeqList* pSeq)
 	}
 	printf("\n");
 }
-//¼ì²é
+//¼ì²éÈÝÁ¿
 void Check(SeqList* pSeq)
 {
 	if (pSeq->size >= pSeq->capacity)

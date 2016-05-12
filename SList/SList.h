@@ -109,7 +109,7 @@ void PopFront(SList*& pHead)
 		pretail = NULL;
 	}
 }
-//查找
+//查找指定数据
 SList* Find(SList* pHead, DataType x)
 {
 	SList* tail = pHead;
@@ -159,7 +159,8 @@ void Remove(SList*& pHead, DataType x)
 		{
 			pretail = tail;
 			tail = tail->_next;
-			if (tail == NULL)                 //如果指定的数据不存在
+			//如果指定的数据不存在
+			if (tail == NULL)                 
 			{
 				printf("There is no data\n");
 				return;
@@ -170,7 +171,7 @@ void Remove(SList*& pHead, DataType x)
 		tail = NULL;
 	}
 }
-//逆序
+//链表逆序
 void Reverse(SList*& pHead)
 {
 	if (pHead == NULL)

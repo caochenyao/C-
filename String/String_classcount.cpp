@@ -39,6 +39,7 @@ public:
 		}
 		return *this;
 	}
+	//жиди[]
 	char& operator[](size_t pos)
 	{
 		String s(_str);

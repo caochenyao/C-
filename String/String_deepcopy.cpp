@@ -35,6 +35,7 @@ public:
 		}
 		return *this; 
 	}
+	//重载>
 	bool operator>(const String& s)
 	{
 		char *this_tmp = this->_str;
@@ -60,6 +61,7 @@ public:
 			}
 		}
 	}
+	//重载==
 	bool operator==(const String& s)
 	{
 		char *this_tmp = this->_str;
@@ -81,14 +83,17 @@ public:
 			}
 		}
 	}
+	//重载<
 	bool operator<(const String& s)
 	{
 		return !((*this > s) && (*this == s));
 	}
+	//重载>=
 	bool operator>=(const String& s)
 	{
 		return (*this > s) || (*this == s);
 	}
+	//重载<=
 	bool operator<=(const String& s)
 	{
 		return (*this < s) || (*this == s);

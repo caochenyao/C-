@@ -123,6 +123,7 @@ public:
 		}
 		return -1;
 	}
+	//删除指定位置的字符
 	void Earse(size_t pos)
 	{
 		Earse(pos,1);
